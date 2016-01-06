@@ -1,15 +1,15 @@
-class SeleniumServerStandalone245 < Formula
+class SeleniumServerStandalone243 < Formula
   desc "Automated Browser Control"
   homepage "http://seleniumhq.org/"
-  url "https://selenium-release.storage.googleapis.com/2.45/selenium-server-standalone-2.45.0.jar"
-  sha256 "1172dfa2d94b43bcbcd9e85c824fd714f2d1ed411b6919a22e7338879fad757b"
+  url "https://selenium-release.storage.googleapis.com/2.43/selenium-server-standalone-2.43.1.jar"
+  sha256 "d3a5f08f7fe1f9e448a8cfbea1063f4aba732ce1061636bffa4e387b9904c7e2"
 
   conflicts_with "selenium-server-standalone", :because => "Differing version of core formula"
-  conflicts_with "selenium-server-standalone243", :because => "Differing version of core formula"
+  conflicts_with "selenium-server-standalone245", :because => "Differing version of core formula"
 
   def install
-    libexec.install "selenium-server-standalone-2.45.0.jar"
-    bin.write_jar_script libexec/"selenium-server-standalone-2.45.0.jar", "selenium-server"
+    libexec.install "selenium-server-standalone-2.43.1.jar"
+    bin.write_jar_script libexec/"selenium-server-standalone-2.43.1.jar", "selenium-server"
   end
 
   plist_options :manual => "selenium-server -p 4444"
